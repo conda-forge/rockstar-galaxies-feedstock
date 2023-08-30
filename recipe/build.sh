@@ -11,5 +11,5 @@ make install
 
 # Copy header files
 mkdir -p ${PREFIX}/include/rockstar-galaxies/io
-install -m 644 ../*.h ${PREFIX}/include/rockstar-galaxies
-install -m 644 ../io/*.h ${PREFIX}/include/rockstar-galaxies/io
+install -m 444 ../*.h ${PREFIX}/include/rockstar-galaxies
+install -m 444 ../io/*.h ${PREFIX}/include/rockstar-galaxies/io

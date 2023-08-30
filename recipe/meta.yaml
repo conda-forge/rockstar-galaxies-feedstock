@@ -32,6 +32,8 @@ requirements:
 test:
   commands:
     - rockstar-galaxies || [[ $? == 1 ]]
+    - test -f ${PREFIX}/lib/librockstar-galaxies{{ SHLIB_EXT }}
+    - test -f ${PREFIX}/include/rockstar-galaxies/rockstar.h
 
 about:
   home: https://bitbucket.org/pbehroozi/rockstar-galaxies
