@@ -33,6 +33,39 @@ test:
   commands:
     - rockstar-galaxies || [[ $? == 1 ]]
 
+outputs:
+  - name: rockstar-galaxies
+    files:
+    - bin/rockstar-galaxies
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - make
+        - cmake
+        - hdf5
+      host:
+        - libtirpc
+        - hdf5
+      run:
+      - libtirpc
+
+  - name: librockstar-galaxies
+    files:
+    - lib/librockstar-galaxies{{ SHLIB_EXT }}
+    - include/*.h
+    - include/*/*.h
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - make
+        - cmake
+        - hdf5
+      host:
+        - libtirpc
+        - hdf5
+      run:
+      - libtirpc
+
 about:
   home: https://bitbucket.org/pbehroozi/rockstar-galaxies
   summary: 'Rockstar halo finder'
