@@ -14,13 +14,12 @@ source:
   - patch_rockstar.patch
 
 build:
-  number: 3
+  number: 2
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
     - make
     - cmake
     - hdf5
