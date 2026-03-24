@@ -14,7 +14,7 @@ source:
   - patch_rockstar.patch
 
 build:
-  number: 5
+  number: 6
   skip: true  # [not linux]
 
 requirements:
