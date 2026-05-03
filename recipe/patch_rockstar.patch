@@ -32,7 +32,7 @@ index 0000000..2edf4ef
 +
 +
 +# add_compile_definitions(H5_USE_16_API ENABLE_HDF5)
-+add_compile_definitions(_LARGEFILE_SOURCE _LARGEFILE64_SOURCE _FILE_OFFSET_BITS=64 _DEFAULT_SOURCE _POSIX_SOURCE _POSIX_C_SOURCE=200809L _DARWIN_C_SOURCE)
++add_compile_definitions(_LARGEFILE_SOURCE _LARGEFILE64_SOURCE _FILE_OFFSET_BITS=64 _DEFAULT_SOURCE _GNU_SOURCE _DARWIN_C_SOURCE)
 +add_compile_options(-fPIC -fno-math-errno -Wall -m64 -Og)
 +add_link_options(-fPIC)
 +
